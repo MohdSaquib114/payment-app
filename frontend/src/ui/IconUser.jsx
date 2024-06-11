@@ -1,5 +1,5 @@
 // icon:user_male_circle | System UIcons https://systemuicons.com/ | Corey Ginnivan
-import * as React from "react";
+
 
 function IconUser(props) {
   return (

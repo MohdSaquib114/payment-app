@@ -7,6 +7,7 @@ require("dotenv").config()
 const DATABASE_URL = process.env.DATABASE_URL
 
 const PORT = process.env.PORT || 5050
+ connection(DATABASE_URL)
 
 const app  = express()
 app.use(cors())
@@ -16,7 +17,6 @@ app.use("/api/v1", router)
 
 app.listen(PORT, ()=>console.log(`Server is listening on port number ${PORT}`))
 
-connection(DATABASE_URL)
 
 
 

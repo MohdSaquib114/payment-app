@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { useRecoilValue, useSetRecoilState } from "recoil"
-import {  modelAtom, transferUserAtom } from "../Atoms/model"
+import { useRecoilValue,  } from "recoil"
+import {  modelAtom,  } from "../Atoms/model"
 import  { Toaster } from 'react-hot-toast';
 import Navbar from "../ui/Navbar";
 import { useBalance, useUserDetail } from "../utility/hooks";
@@ -9,7 +9,7 @@ import { nameCorrector } from "../utility/utilities";
 import IconEye from "../ui/EyeIcon";
 import IconEyeOff from "../ui/EyeIconOff";
 import Card from "../ui/Card";
-import IconUser from "../ui/IconUser";
+
 
 import { TransferComponent } from "../ui/TrasnsferComponent";
 import { UsersBox } from "../ui/UserBox";
@@ -65,7 +65,7 @@ useEffect(()=>{
   async function getUser()
   {
     const token = localStorage.getItem("token")
-    const {data} = await axios.get(`http://localhost:3000/api/v1/user/bulk?filter=${query}`,{
+    const {data} = await axios.get(`https://payment-app-03ff.onrender.com/api/v1/user/bulk?filter=${query}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }

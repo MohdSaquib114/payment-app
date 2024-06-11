@@ -38,7 +38,8 @@ async function postData(){
     return
   }
 try{
-    const {data} =await axios.post("http://localhost:3000/api/v1/user/signup",
+ 
+    const {data} =await axios.post("https://payment-app-03ff.onrender.com/api/v1/user/signup",
     {...formData},
     {headers:
       {"content-type":"application/json"}
@@ -47,12 +48,14 @@ try{
   )
 
  
-localStorage.setItem("token",data.token )
+localStorage.setItem("token",data?.token )
+
 navigate("/dashboard")
   }catch(e){
-    if(e.response.data.error){
-      toaster("Password is already taken")
-    }
+  
+    
+      toaster("There is a error in server")
+    
 console.log(e)
 
   }

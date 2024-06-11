@@ -4,7 +4,7 @@ import LoginPage from "./Pages/LoginPage"
 import Dashboard from "./Pages/Dashboard"
 import AppLayout from "./Pages/AppLayout"
 import {RecoilRoot} from 'recoil';
-import { Suspense } from "react"
+
  
 
 function App() {

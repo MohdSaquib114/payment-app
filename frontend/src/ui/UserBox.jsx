@@ -1,5 +1,6 @@
 import {useSetRecoilState} from "recoil"
 import { modelAtom, transferUserAtom } from "../Atoms/model"
+import IconUser from "../ui/IconUser"
 
 export function UsersBox({username,userId}){
     const setModal = useSetRecoilState(modelAtom)
